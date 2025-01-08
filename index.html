@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #8749D3, #ff758c);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        h2 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            background: white;
+            color: #ff758c;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+        .btn:hover {
+            background: #ff758c;
+            color: white;
+        }
+        .fade {
+            animation: fadeEffect 2s infinite;
+        }
+        @keyframes fadeEffect {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        .hidden {
+            display: none;
+        }
+        .animation {
+            margin-top: 20px;
+            animation: float 3s infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+    <script>
+        function revealPicture() {
+            const button = document.getElementById('revealButton');
+            const picture = document.getElementById('birthdayImage');
+            button.classList.add('hidden'); // Hide the button
+            picture.classList.remove('hidden'); // Show the picture
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Doğum günün kutlu olsunnn 🎉</h1>
+        <h2><b>BURAK</b></h2>
+        <p>
+            Bir insanın var olabilmesi 400 trilyonda 1 ihtimalle gerçekleşen bir mucize; bu da bence hayatın ne kadar kıymetli olduğunu hatırlatıyor. Bazen kaybolmuş gibi hissetsen bile, tam da olman gereken yerdesin ve her şey istediğin gibi olacak—Sen gerçekten bir hediyesin.
+        </p>
+        <a href="https://www.youtube.com/watch?v=lrvCwa9MmFU" class="btn">1.Sürpriz</a>
+        <a href="https://open.spotify.com/track/3PfnJmBZOtS9rMrVUzTwu6?si=PoMJcxyeS4KcI19-FND-Ng" class="btn fade">2.Gerçek sürpriz</a>
+        <!-- Hidden Button -->
+        <button id="revealButton" class="btn" onclick="revealPicture()">Click to Reveal</button>
+        <!-- Hidden Picture -->
+        <div id="birthdayImage" class="animation hidden">
+            <img src="https://imgur.com/nOJ21bS.png" style="width: 150px; height: 150px;">
+        </div>
+    </div>
+</body>
+</html>
